@@ -4,7 +4,7 @@ import { Text } from './ui/text';
 export function Skills() {
   return (
     <div className="flex flex-col gap-8 px-4 py-2 mb-6 border-b border-b-neutral-300">
-      <Text variant="body-sr" className="text-2xl tracking-wider font-semibold">
+      <Text variant="h6" className="text-2xl tracking-wider font-semibold">
         I can help you with ...
       </Text>
       <div className="flex justify-between flex-wrap gap-4 mb-4">

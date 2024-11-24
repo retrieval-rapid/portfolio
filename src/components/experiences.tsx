@@ -5,7 +5,7 @@ import { EXPERIENCE } from '@/constants';
 export function Experiences() {
   return (
     <div className="flex flex-col gap-4 px-4 my-4 mb-6 border-b border-b-neutral-300">
-      <Text variant="h6">Experiences</Text>
+      <Text variant="h6" className='tracking-wider'>Experiences</Text>
       <div className="flex flex-col items-center justify-start">
         {EXPERIENCE.map((exp, index) => {
           const [intro, ...restExp] = exp.details.split('-');
