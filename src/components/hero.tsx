@@ -6,7 +6,7 @@ import { SOCIAL_LINKS } from '@/data/links';
 export function Hero() {
   return (
     <div className="container flex flex-col gap-8 px-4 py-2 mb-6 border-b border-b-neutral-300">
-      <Text variant="h2">
+      <Text variant="h1" className='tracking-wider'>
         Full Stack <br /> Developer
       </Text>
       <div className="grid grid-cols-5 gap-8">
