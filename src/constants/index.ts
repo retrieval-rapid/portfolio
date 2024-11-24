@@ -1,8 +1,8 @@
 export const LINKS = [
-  { text: 'About', href: '/about' },
-  { text: 'Work', href: '/work' },
-  { text: 'Process', href: '/process' },
-  { text: 'Contact', href: '/contact' },
+  { text: 'About', href: '#' },
+  { text: 'Work', href: '#' },
+  { text: 'Process', href: '#' },
+  { text: 'Contact', href: '#' },
 ];
 
 export const SOCIAL_LINKS = [

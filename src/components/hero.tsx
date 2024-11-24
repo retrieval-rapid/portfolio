@@ -1,7 +1,5 @@
 import { Text } from './ui/text';
-import Link from 'next/link';
 import { Button } from './ui/button';
-import { SOCIAL_LINKS } from '@/constants';
 
 export function Hero() {
   return (
@@ -23,7 +21,7 @@ export function Hero() {
             <span className="animate-pulse bg-white rounded-full size-2 absolute right-2 top-1/2 -translate-y-1/2"></span>
           </Button>
         </div>
-        <div className="col-span-5 lg:col-span-2 xl:col-span-1">
+        {/* <div className="col-span-5 lg:col-span-2 xl:col-span-1">
           <div className="flex flex-col gap-4">
             <Text
               variant="body-sr"
@@ -37,7 +35,7 @@ export function Hero() {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
