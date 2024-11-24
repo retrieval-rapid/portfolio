@@ -10,7 +10,7 @@ export function About() {
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOutOut' }}
+        transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
         className="my-20 text-center text-4xl"
       >
         About <span className="text-neutral-500">Me</span>
@@ -20,7 +20,7 @@ export function About() {
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOutOut' }}
+          transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
           className="w-full lg:w-1/2 lg:p-8"
         >
           <div className="flex items-center justify-center">

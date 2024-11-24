@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 
 const container = (delay: number) => ({
   hidden: { x: -100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay, ease: 'easeInOutOut' } },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay, ease: 'easeInOut' } },
 });
 
 export function Hero() {
@@ -44,7 +44,7 @@ export function Hero() {
               <motion.div
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5, ease: 'easeInOutOut' }}
+                transition={{ delay: 0.5, duration: 0.5, ease: 'easeInOut' }}
                 className="flex justify-center"
               >
                 <Image src={profilePic} alt="profile-pic" />
