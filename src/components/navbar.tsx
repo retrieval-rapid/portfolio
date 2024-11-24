@@ -1,4 +1,4 @@
-import { LINKS } from '@/data/links';
+import { LINKS } from '@/constants';
 import { Logo } from './logo';
 import Link from 'next/link';
 

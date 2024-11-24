@@ -1,7 +1,7 @@
-import { SOCIAL_LINKS } from '@/data/links';
 import { Text } from './ui/text';
 import Link from 'next/link';
 import { Button } from './ui/button';
+import { SOCIAL_LINKS } from '@/constants';
 export function Footer() {
   return (
     <div className="px-4 py-2">

@@ -1,5 +1,5 @@
+import { SKILLS } from '@/constants';
 import { Text } from './ui/text';
-import { SKILLS } from '@/data/skills';
 
 export function Skills() {
   return (
