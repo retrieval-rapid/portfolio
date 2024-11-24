@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import classNames from 'classnames';
 
 export interface LogoProps {
@@ -7,7 +8,9 @@ export interface LogoProps {
 
 export function Logo({ size = 'default', className }: LogoProps) {
   return (
-    <img
+    <Image
+      width={100}
+      height={100}
       className={classNames(
         'w-full object-contain',
         {

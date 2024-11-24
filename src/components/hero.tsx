@@ -6,15 +6,15 @@ import { SOCIAL_LINKS } from '@/constants';
 export function Hero() {
   return (
     <div className="container flex flex-col gap-8 px-4 py-2 mb-6 border-b border-b-neutral-300">
-      <Text variant="h1" className='tracking-wider'>
+      <Text variant="h1" className="tracking-wider">
         Full Stack <br /> Developer
       </Text>
       <div className="grid grid-cols-5 gap-8">
         <div className="col-span-5 lg:col-span-3 xl:col-span-4">
           <Text variant="body-sr" className="font-light tracking-wider leading-loose">
             Specialized in Web Design, UX / UI, Framer, and Front End Development. <br />
-            I'm helping startups and business owners to make a visual statement through spotless Web
-            Design and Development so they can increase brand awareness and sell more.
+            I&apos;m helping startups and business owners to make a visual statement through
+            spotless Web Design and Development so they can increase brand awareness and sell more.
           </Text>
           <Button variant="default" className="relative !bg-black text-white rounded-3xl pr-8 mt-5">
             <Text variant="body-esr" className="tracking-wider">
@@ -29,7 +29,7 @@ export function Hero() {
               variant="body-sr"
               className="text-gray-500 tracking-wider underline underline-offset-8"
             >
-              Let's get connected
+              Let&apos;s get connected
             </Text>
             {SOCIAL_LINKS.map((link, index) => (
               <Link href={link.href} key={index}>
