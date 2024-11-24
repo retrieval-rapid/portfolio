@@ -13,7 +13,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]" />
         </div>
       </div>
-      <div className="w-3/5 mx-auto">
+      <div className="w-full md:w-3/5 mx-auto">
         <Navbar />
         <Hero />
         <Skills />
