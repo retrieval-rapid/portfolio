@@ -1,3 +1,4 @@
+import { Experiences } from '@/components/experiences';
 import { FAQS } from '@/components/faqs';
 import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
@@ -12,6 +13,7 @@ export default function Home() {
           <Navbar />
           <Hero />
           <Skills />
+          <Experiences />
           <FAQS />
           <Footer />
         </div>
