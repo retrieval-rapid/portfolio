@@ -84,4 +84,4 @@ export const EXPERIENCE = [
 
 export const COLLAB = "Let’s talk about a <br/>  project, <br/> collaboration or an <br/> idea you may have"
 
-export const JOB_TYPE = "Full Stack <br/> Developer"
+export const JOB_TYPE = "UI/UX | FrontEnd <br/> Engineer"

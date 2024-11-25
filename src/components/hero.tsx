@@ -31,13 +31,13 @@ export function Hero() {
           variants={animateFromBottom(0.5)}
           className="col-span-5 lg:col-span-3 xl:col-span-4"
         >
-          <Text variant="body-sr" className="font-light tracking-wider leading-loose">
+          <Text variant="body-mr" className="tracking-wider leading-loose">
             Specialized in Web Design, UX / UI, Framer, and Front End Development. <br />
             I&apos;m helping startups and business owners to make a visual statement through
             spotless Web Design and Development so they can increase brand awareness and sell more.
           </Text>
           <Button variant="default" className="relative !bg-black text-white rounded-3xl pr-8 mt-5">
-            <Text variant="body-esr" className="tracking-wider">
+            <Text variant="body-sr" className="tracking-wider">
               Drop me line
             </Text>
             <span className="animate-pulse bg-white rounded-full size-2 absolute right-2 top-1/2 -translate-y-1/2"></span>

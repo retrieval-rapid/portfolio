@@ -32,10 +32,10 @@ export function Skills() {
                 {String(index + 1).padStart(2, '0')}
               </Text>
               <div className="flex flex-col gap-2">
-                <Text variant="body-sr" className="text-xl tracking-wider">
+                <Text variant="body-lm" className="tracking-wider">
                   {skill.title}
                 </Text>
-                <Text variant="body-esr" className="text-justify leading-4 tracking-wider">
+                <Text variant="body-sr" className="text-justify leading-4 tracking-wider">
                   {skill.description}
                 </Text>
               </div>

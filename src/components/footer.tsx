@@ -19,7 +19,7 @@ export function Footer() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
-                  duration: 0.5 * i,
+                  duration: 0.25 * i,
                   delay: i / 10,
                 }}
               >
