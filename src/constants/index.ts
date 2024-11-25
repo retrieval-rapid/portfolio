@@ -4,7 +4,6 @@ export const LINKS = [
   { text: 'Process', href: '#' },
   { text: 'Contact', href: '#' },
 ];
-
 export const SOCIAL_LINKS = [
   { text: 'Github', href: '#' },
   { text: 'LinkedIn', href: '#' },
@@ -82,3 +81,7 @@ export const EXPERIENCE = [
     active: false,
   },
 ];
+
+export const COLLAB = "Let’s talk about a <br/>  project, <br/> collaboration or an <br/> idea you may have"
+
+export const JOB_TYPE = "Full Stack <br/> Developer"

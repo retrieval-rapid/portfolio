@@ -1,14 +1,36 @@
+'use client';
 import { Text } from './ui/text';
 import { Button } from './ui/button';
+import { motion } from 'motion/react';
+import { useAnimate } from '@/hooks/useAnimate';
+import { JOB_TYPE } from '@/constants';
 
 export function Hero() {
+  const { animateFromLeft, animateFromBottom, animateVisible } = useAnimate();
   return (
     <div className="container flex flex-col gap-8 px-4 py-2 mb-6 border-b border-b-neutral-300">
       <Text variant="h1" className="tracking-wider">
-        Full Stack <br /> Developer
+        {JOB_TYPE?.split(' ').map((x, i) => (
+          <motion.span
+            key={i}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: i / 10,
+            }}
+          >
+            {x.match(/<br\s*\/?>/) ? <br /> : x}{' '}
+          </motion.span>
+        ))}
       </Text>
       <div className="grid grid-cols-5 gap-8">
-        <div className="col-span-5 lg:col-span-3 xl:col-span-4">
+        <motion.div
+          initial="initial"
+          whileInView="whileInView"
+          variants={animateFromBottom(0.5)}
+          className="col-span-5 lg:col-span-3 xl:col-span-4"
+        >
           <Text variant="body-sr" className="font-light tracking-wider leading-loose">
             Specialized in Web Design, UX / UI, Framer, and Front End Development. <br />
             I&apos;m helping startups and business owners to make a visual statement through
@@ -20,7 +42,7 @@ export function Hero() {
             </Text>
             <span className="animate-pulse bg-white rounded-full size-2 absolute right-2 top-1/2 -translate-y-1/2"></span>
           </Button>
-        </div>
+        </motion.div>
         {/* <div className="col-span-5 lg:col-span-2 xl:col-span-1">
           <div className="flex flex-col gap-4">
             <Text

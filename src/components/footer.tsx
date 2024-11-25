@@ -1,14 +1,31 @@
+'use client';
 import { Text } from './ui/text';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { SOCIAL_LINKS } from '@/constants';
+import { motion } from 'motion/react';
+import { COLLAB } from '@/constants';
+import { useAnimate } from '@/hooks/useAnimate';
+
 export function Footer() {
+  const { animateFromBottom } = useAnimate();
   return (
     <div className="px-4 py-2">
       <div className="grid grid-cols-5 mb-6">
         <div className="col-span-5 md:col-span-4">
           <Text variant="h4" className="text-3xl tracking-wider leading-loose text-justify">
-            Let’s talk about a <br /> project, <br /> collaboration or an <br /> idea you may have
+            {COLLAB?.split(' ')?.map((x, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5 * i,
+                  delay: i / 10,
+                }}
+              >
+                {x.match(/<br\s*\/?>/) ? <br /> : x}{' '}
+              </motion.span>
+            ))}
           </Text>
         </div>
         <div className="col-span-5 md:col-span-1 flex">
@@ -25,7 +42,12 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap justify-between items-center">
+      <motion.div
+        initial="initial"
+        whileInView={'whileInView'}
+        variants={animateFromBottom(0.5, 1)}
+        className="flex flex-wrap justify-between items-center"
+      >
         <Text variant="body-esr" className="tracking-wider text-center">
           &copy;
           <span className="px-1 text-lg bg-gradient-to-r from-slate-400 to-gray-900 bg-clip-text text-transparent">
@@ -43,7 +65,7 @@ export function Footer() {
             </Link>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

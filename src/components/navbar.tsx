@@ -1,10 +1,20 @@
+'use client'
 import { LINKS } from '@/constants';
 import { Logo } from './logo';
 import Link from 'next/link';
+import {motion} from 'motion/react';
+import { useAnimate } from '@/hooks/useAnimate';
 
 export function Navbar() {
+  const { animateFromTop } = useAnimate();
   return (
-    <div className="flex items-center justify-between px-4 py-2 mb-10">
+    <motion.div
+      initial="initial"
+      whileInView="whileInView"
+      variants={animateFromTop(0.5)}
+      transition={{type: 'spring'}}
+      className="flex items-center justify-between px-4 py-2 mb-10"
+    >
       <div className="flex items-center w-16">
         <Logo size="default" />
       </div>
@@ -15,6 +25,6 @@ export function Navbar() {
           </Link>
         ))}
       </nav>
-    </div>
+    </motion.div>
   );
 }

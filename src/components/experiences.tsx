@@ -1,17 +1,33 @@
+'use client';
 import classNames from 'classnames';
 import { Text } from './ui/text';
 import { EXPERIENCE } from '@/constants';
+import { useAnimate } from '@/hooks/useAnimate';
+import { motion } from 'motion/react';
 
 export function Experiences() {
+  const { animateFromTop, animateFromLeft, animateFromRight, animateVisible } = useAnimate();
   return (
-    <div className="flex flex-col gap-4 px-4 my-4 mb-6 border-b border-b-neutral-300">
-      <Text variant="h6" className='tracking-wider'>Experiences</Text>
-      <div className="flex flex-col items-center justify-start">
+    <div className="flex flex-col gap-4 px-4 my-4 mt-8 mb-6 border-b border-b-neutral-300">
+      <motion.div initial="initial" whileInView="whileInView" variants={animateVisible(1.5)}>
+        <Text variant="h6" className="tracking-wider">
+          Experiences
+        </Text>
+      </motion.div>
+      <motion.div
+        initial="initial"
+        whileInView="whileInView"
+        variants={animateVisible(0.5)}
+        className="flex flex-col items-center justify-start"
+      >
         {EXPERIENCE.map((exp, index) => {
           const [intro, ...restExp] = exp.details.split('-');
           return (
-            <div
+            <motion.div
               key={index}
+              initial="initial"
+              whileInView="whileInView"
+              variants={animateVisible(0.5)}
               className={classNames(
                 { 'border-l border-l-neutral-300': exp.active },
                 'relative px-4 '
@@ -38,18 +54,24 @@ export function Experiences() {
                 </Text>
                 <ul className="px-2">
                   {restExp.map((exp, index) => (
-                    <li key={index} className='flex gap-2 before:content-["✓"] before:text-green-400'>
+                    <motion.li
+                      key={index}
+                      className='flex gap-2 before:content-["✓"] before:text-green-400'
+                      initial="initial"
+                      whileInView={'whileInView'}
+                      variants={animateVisible(0.5 * index)}
+                    >
                       <Text variant="body-sr" className="tracking-wider leading-relaxed">
                         {exp}
                       </Text>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }
